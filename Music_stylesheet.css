@@ -1,0 +1,34 @@
+/*Stylesheet.css*/
+
+
+/* Section containing styling of Nav bar, created by Matthew 40653888*/
+html, body {                            
+    margin: 0;                         
+}
+
+ul {                                   
+    list-style-type: none;            
+    margin: 0;                          
+    padding: 0;                         
+    display: flex;                      
+}
+
+li a:hover {                            
+    background-color: #F1EDEE;        
+    color: black;                     
+}
+
+#navigation_bar, li a {                     
+    display: flex;                  
+    justify-content: left;
+    align-items: center;
+    background-color: #3D5467;        
+    padding: 14px 18px ; 
+    color: black;                   
+}
+
+/*End of Section */
+
+body {
+    background-color: #F1EDEE;
+}
