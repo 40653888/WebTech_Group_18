@@ -6,7 +6,7 @@ html, body {
     margin: 0;                         
 }
 
-ul {                                   
+#navigation_bar ul {                                   
     list-style-type: none;            
     margin: 0;                          
     padding: 0;                         
@@ -20,7 +20,7 @@ li a:hover {
 
 #navigation_bar, li a {                     
     display: flex;                  
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
     background-color: #3D5467;        
     padding: 14px 18px ; 
@@ -32,3 +32,39 @@ li a:hover {
 body {
     background-color: #F1EDEE;
 }
+
+/*Section containing styling for main Page*/
+
+#section1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section2 {
+    max-width: 45%;
+    text-align: center;
+    flex:1;
+}
+
+.section2 img{
+    width: 40%;
+    height: auto;
+    max-height: 250px ;
+    border: 1px solid #ccc;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+#Under_section {
+    background-color: #DB5461 ;
+    width: 100%;
+    color: black;
+    padding: 120px 0;
+    text-align: center;
+
+}
+
+/*End of Section*/
