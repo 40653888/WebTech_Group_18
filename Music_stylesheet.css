@@ -1,70 +1,107 @@
 /*Stylesheet.css*/
+* {                            
+    margin: 0;       
+    padding: 0;    
+    overflow-x: hidden; 
 
-
-/* Section containing styling of Nav bar, created by Matthew 40653888*/
-html, body {                            
-    margin: 0;                         
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
-
-#navigation_bar ul {                                   
-    list-style-type: none;            
-    margin: 0;                          
-    padding: 0;                         
-    display: flex;                      
-}
-
-li a:hover {                            
-    background-color: #F1EDEE;        
-    color: black;                     
-}
-
-#navigation_bar, li a {                     
-    display: flex;                  
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #3D5467;        
-    padding: 14px 18px ; 
-    color: black;                   
-}
-
-/*End of Section */
 
 body {
     background-color: #F1EDEE;
 }
 
+/* Section containing styling of Nav bar, created by Matthew 40653888*/
+
+#navigation_bar ul {     
+    font-size: 20px;                              
+    list-style-type: none;         
+    margin: 0;                          
+    padding: 0;                         
+    display: flex;                 
+}
+
+#navigation_bar li :hover {                            
+    background-color: #f1edee9e;  
+    border-radius: 10px;      
+    color: black;                     
+}
+
+#navigation_bar ul {       
+    width: 100vw;                             
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #3D5467;        
+    padding: 14px;             
+}
+
+#navigation_bar a {              
+    display: flex;                  
+    text-decoration: none;          
+    padding: 18px ; 
+    color: black;                   
+}
+
+
+/*End of Section */
+#index_description {
+    text-align: center;
+    padding: 0 100px;
+}
+
+#index_description h1 {
+    padding: 25px;
+}
+
 /*Section containing styling for main Page*/
 
-#section1 {
+#overview {
+    padding: 80px 225px;
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.overview-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.section2 {
-    max-width: 45%;
     text-align: center;
-    flex:1;
 }
 
-.section2 img{
-    width: 40%;
-    height: auto;
-    max-height: 250px ;
-    border: 1px solid #ccc;
-}
-
-hr {
-    margin: 10px 0;
-}
-
-#Under_section {
-    background-color: #DB5461 ;
+.overview-item img {
     width: 100%;
-    color: black;
-    padding: 120px 0;
-    text-align: center;
-
+    height: auto;
+    max-width: 300px;
 }
 
-/*End of Section*/
+#overview p {
+    padding: 50px;
+    max-width: 600px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    background-color: #DB5461;
+    height: 100px;
+}
+
+#userProgress {
+    width: 1000px;
+    margin: 10px auto;
+    background-color: #3D5467;
+}
+
+#progressBar {
+    width: 1%;
+    height: 30px;
+    background-color: #8AA29E;
+}
