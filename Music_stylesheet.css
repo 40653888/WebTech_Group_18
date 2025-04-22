@@ -14,7 +14,7 @@ body {
     background-color: #F1EDEE;
 }
 
-/* Section containing styling of Nav bar, created by Matthew 40653888*/
+/* Section containing styling of Nav bar*/
 
 #navigation_bar ul {     
     font-size: 20px;                              
@@ -55,6 +55,11 @@ body {
 #index_description h1 {
     padding: 25px;
 }
+/*--------------------------------------------------------*/
+#jazz_subgenres  {
+    padding: 20px;
+}
+/*--------------------------------------------------------*/
 
 /*Section containing styling for main Page*/
 
@@ -108,9 +113,4 @@ body {
     width: 1%;
     height: 30px;
     background-color: #8AA29E;
-}
-
-#userProgress p {
-    float: right;
-    padding: 5px;
 }
