@@ -94,14 +94,23 @@ body {
     height: 100px;
 }
 
-#userProgress {
+#footer h1 {
+    padding: 4px;
+}
+
+#progressBar {
     width: 1000px;
     margin: 10px auto;
     background-color: #3D5467;
 }
 
-#progressBar {
+#userProgress {
     width: 1%;
     height: 30px;
     background-color: #8AA29E;
+}
+
+#userProgress p {
+    float: right;
+    padding: 5px;
 }
