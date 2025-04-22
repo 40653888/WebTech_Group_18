@@ -103,6 +103,11 @@ body {
     padding: 4px;
 }
 
+#footer p {
+    padding: 5px;
+    float: right;
+}
+
 #progressBar {
     width: 1000px;
     margin: 10px auto;
