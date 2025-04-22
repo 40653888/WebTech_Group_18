@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="Music_stylesheet.css">
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
     <title>Classical</title>
 </head>
 <body>
+    <div id="navigation_bar">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='Classical.html'>Classical</a></li>
+            <li><a href='Rock_n_roll.html'>Rock n Roll</a></li>
+            <li><a href='Disco.html'>Disco</a></li>
+            <li><a href='Jazz_Period.html'>Jazz</a></li>
+        </ul>
+    </div>
+
     <h1>Classical Music</h1>
     <p>Pieces from year-year</p>
 
@@ -28,5 +44,15 @@
 
         </div>
     </section>
+
+    <div id="footer">   <!-- This Section will contain the Progress Bar and any additional info to be added. -->
+        <h1>Progress</h1>
+ 
+        <div id="progressBar">
+             <div id="userProgress"><p id="progressAmount"></p></div>
+         </div>
+     </div>
+ 
+     <script src="script.js"></script>
 </body>
 </html>
