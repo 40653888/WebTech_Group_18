@@ -14,7 +14,7 @@ body {
     background-color: #F1EDEE;
 }
 
-/* Section containing styling of Nav bar*/
+/* Navigation Bar */
 
 #navigation_bar ul {     
     font-size: 20px;                              
@@ -46,7 +46,8 @@ body {
 }
 
 
-/*End of Section */
+/* Index */
+
 #index_description {
     text-align: center;
     padding: 0 100px;
@@ -55,13 +56,6 @@ body {
 #index_description h1 {
     padding: 25px;
 }
-/*--------------------------------------------------------*/
-#jazz_subgenres  {
-    padding: 20px;
-}
-/*--------------------------------------------------------*/
-
-/*Section containing styling for main Page*/
 
 #overview {
     padding: 80px 225px;
@@ -89,6 +83,32 @@ body {
     padding: 50px;
     max-width: 600px;
 }
+
+
+/* Classical */
+
+
+
+
+/* Rock n Roll */
+
+
+
+
+/* Disco */
+
+
+
+
+/* Jazz */
+
+#jazz_subgenres  {
+    padding: 20px;
+}
+
+
+
+/* Footer */
 
 #footer {
     position: fixed;
