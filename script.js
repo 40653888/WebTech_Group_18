@@ -21,7 +21,6 @@ correctAnswer.forEach(button => {
 
 
 
-
 const jazz_quiz_questions = [
     {
         jazz_question: " What country of Origin did Jazz come from? ",

@@ -108,6 +108,90 @@ body {
 
 
 
+/*-- Styling for Jazz Quiz --*/
+
+#Under_section {
+    background-color: #8AA29E ;
+    width: 100%;
+    color: black;
+    padding: 150px 0;
+    text-align: center;
+
+}
+
+#Under_section h2 {
+    padding: 20px;
+    margin: 20px;
+}
+
+#Under_section p {
+    padding: 20px;
+    margin: 20px;
+}
+
+  
+#jazzquiz {
+    background-color: #F1EDEE;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    align-items: center;
+    margin: auto;
+  }
+  
+  #jazzquestions {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #jazzoptions {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    border: 2px;
+  }
+  
+  #next {
+    margin-top: 10px;
+    background-color: #DB5461;
+    color: #F1EDEE;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /**-- Styling for Jazz Page --**/
+
+  #jazzheader{
+    text-align: center;
+    padding: 3px;
+}
+
+.jazzcontainer{
+    display:flex;
+    align-items: center;
+
+}
+
+.jazztext{
+    background-color: #F1EDEE;
+    flex:1;
+    font-size: 22px;
+    padding: 25px;
+}
+
+.jazzimage img{
+    flex:1;
+    width: 100%;
+    max-width: 500px;
+    height: auto; 
+    padding: 25px;
+}
+
+
+
 /* Footer */
 
 #footer {
