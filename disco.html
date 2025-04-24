@@ -26,7 +26,6 @@
     <h1 id="discoheader">🪩 The Disco Period</h1>
     <div id="discoBall"></div>
 
-
     <section>
         <h2>What is Disco?</h2>
         <p>
@@ -46,9 +45,16 @@
     </section>
 
     <section>
-        <h2>Disco Fashion</h2>
+        <h2>Disco Fashion & Culture</h2>
         <p>
-            Disco fashion was all about glam and glitz—think bell-bottoms, jumpsuits, platform shoes, sequins, and afros. Nightclubs like Studio 54 in New York were the epicenter of this glamorous lifestyle.
+            Disco fashion was all about glam and glitz—think bell-bottoms, jumpsuits, platform shoes, sequins, and afros. Nightclubs like Studio 54 in New York were the epicenter of this glamorous lifestyle. The culture promoted self-expression, freedom, and inclusivity. Disco dancing was also iconic—people grooved to hits under spinning mirrored disco balls, showing off moves like the Hustle.
+        </p>
+    </section>
+
+    <section>
+        <h2>Famous Disco Hits</h2>
+        <p>
+            Some unforgettable disco anthems include "Stayin' Alive" by the Bee Gees, "I Will Survive" by Gloria Gaynor, "Don't Leave Me This Way" by Thelma Houston, and "Le Freak" by Chic. These tracks are still played at parties and retro nights today.
         </p>
     </section>
 
@@ -72,6 +78,16 @@
             <input type="radio" name="q3" value="b"> ABBA<br>
             <input type="radio" name="q3" value="c"> Chic<br><br>
 
+            <label for="q4">4. What was the name of the iconic NYC nightclub famous for its disco scene?</label><br>
+            <input type="radio" name="q4" value="a"> The Roxy<br>
+            <input type="radio" name="q4" value="b"> Studio 54<br>
+            <input type="radio" name="q4" value="c"> Limelight<br><br>
+
+            <label for="q5">5. Which of these is a famous disco dance move?</label><br>
+            <input type="radio" name="q5" value="a"> The Hustle<br>
+            <input type="radio" name="q5" value="b"> The Moonwalk<br>
+            <input type="radio" name="q5" value="c"> The Robot<br><br>
+
             <button type="button" onclick="submitQuiz()">Submit Quiz</button>
         </form>
 
@@ -90,7 +106,9 @@
             const answers = {
                 q1: 'b',
                 q2: 'b',
-                q3: 'a'
+                q3: 'a',
+                q4: 'b',
+                q5: 'a'
             };
             let score = 0;
             for (let question in answers) {
@@ -99,10 +117,11 @@
                     score++;
                 }
             }
-            document.getElementById("quizResult").innerText = `You scored ${score} out of 3!`;
+            document.getElementById("quizResult").innerText = `You scored ${score} out of 5!`;
         }
     </script>
 
     <script src="script.js"></script>
 </body>
 </html>
+          
