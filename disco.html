@@ -1,95 +1,154 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disco</title>
-  <link rel="stylesheet" href="Stylesheet.css" />
+    <link rel="stylesheet" href="Music_stylesheet.css">
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Disco</title>
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <div id="navigation_bar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="disco.html">Disco</a></li>
-      <!-- Add other genres as needed -->
-    </ul>
-  </div>
-
-  <!-- Disco Introduction Section -->
-  <div id="Under_section">
-    <h2>Welcome to the Disco Dance Zone</h2>
-    <p>Disco exploded onto the scene in the 1970s with funky beats, flashy outfits, and energetic dance moves. It brought people together under shimmering lights and pulsing rhythms that still influence music and dance today.</p>
-  </div>
-
-  <!-- Disco Dance Moves Section -->
-  <div class="jazzcontainer">
-    <div class="jazztext">
-      <h3>Famous Disco Dance Moves</h3>
-      <ul>
-        <li><strong>The Hustle:</strong> A slick partner dance that became a disco staple in the '70s.</li>
-        <li><strong>The Bus Stop:</strong> A choreographed line dance with turns and synchronized steps.</li>
-        <li><strong>The Bump:</strong> A cheeky move where partners bump hips to the beat.</li>
-        <li><strong>The YMCA:</strong> A crowd favorite with iconic arm motions to spell out Y-M-C-A.</li>
-      </ul>
+    <div id="navigation_bar">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='classical.html'>Classical</a></li>
+            <li><a href='rock_n_roll.html'>Rock n Roll</a></li>
+            <li><a href='disco.html'>Disco</a></li>
+            <li><a href='Jazz_Period.html'>Jazz</a></li>
+        </ul>
     </div>
-    <div class="jazzimage">
-      <img src="images/disco-dance.jpg" alt="Disco dancers in action" />
+
+    <section class="hero-container">
+        <div class="hero-headline">
+            <h2>Step into the</h2>
+            <h1>🪩 Disco Era! ✨</h1>
+        </div>
+        <div class="hero-p-container">
+            <div class="hero-p">
+                <p>The Disco period, peaking in the late 1970s, was a vibrant explosion of dance music, glittering fashion, and nightclub culture. Think mirror balls, funky basslines, and non-stop rhythm!</p>
+            </div>
+            <div class="hero-p">
+                <p>Get ready to strut your stuff and test your knowledge with our disco quiz. Boogie through the questions and relive the golden age of dance floors!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="transition">
+        <h1>Groove your way through the glitter and glam of the disco revolution!</h1>
+    </section>
+
+    <section>
+        <div class="timeline-grid">
+            <div class="left-empty-ends"></div>
+            <div class="right-empty-ends"></div>
+
+            <div class="left">
+                <h1>🕺</h1>
+                <div class="left-text">
+                    <h3>Explore the birth of disco through iconic clubs like Studio 54 and Paradise Garage.</h3>
+                </div>
+            </div>
+
+            <div class="right-empty"></div>
+            <div class="left-empty"></div>
+
+            <div class="right">
+                <div class="right-text">
+                    <h3>Disco fashion was bold and dazzling: sequins, bell-bottoms, and platform shoes!</h3>
+                </div>
+                <h1>✨</h1>
+            </div>
+
+            <div class="left">
+                <h1>🎶</h1>
+                <div class="left-text">
+                    <h3>Legends like Donna Summer, Bee Gees, and Chic dominated the charts and hearts.</h3>
+                </div>
+            </div>
+
+            <div class="right-empty"></div>
+            <div class="left-empty"></div>
+
+            <div class="right">
+                <div class="right-text">
+                    <h3>Take the quiz and earn your disco crown!</h3>
+                </div>
+                <h1>👑</h1>
+            </div>
+
+            <div class="left">
+                <h1>💃</h1>
+                <div class="left-text">
+                    <h3>Show off your knowledge and keep the disco inferno burning!</h3>
+                </div>
+            </div>
+
+            <div class="right-empty"></div>
+            <div class="left-empty-ends"></div>
+            <div class="right-empty-ends"></div>
+        </div>
+    </section>
+
+    <!-- Disco Quiz Section -->
+    <section class="quiz-section">
+        <div class="quiz-container">
+            <h2>🪩 Disco Quiz: Are You a Dancefloor Pro? 🪩</h2>
+            <form id="discoQuiz">
+                <p>1. Who is known as the "Queen of Disco"?</p>
+                <label><input type="radio" name="q1" value="donna">Donna Summer</label><br>
+                <label><input type="radio" name="q1" value="whitney">Whitney Houston</label><br>
+
+                <p>2. Which dance style became popular with disco music?</p>
+                <label><input type="radio" name="q2" value="tango">Tango</label><br>
+                <label><input type="radio" name="q2" value="hustle">The Hustle</label><br>
+
+                <p>3. What movie helped popularize disco music globally?</p>
+                <label><input type="radio" name="q3" value="saturday">Saturday Night Fever</label><br>
+                <label><input type="radio" name="q3" value="grease">Grease</label><br>
+
+                <p>4. What is a common disco music feature?</p>
+                <label><input type="radio" name="q4" value="slow">Slow piano ballads</label><br>
+                <label><input type="radio" name="q4" value="beat">Four-on-the-floor beat</label><br>
+
+                <p>5. Which of these bands is associated with disco music?</p>
+                <label><input type="radio" name="q5" value="queen">Queen</label><br>
+                <label><input type="radio" name="q5" value="beegees">Bee Gees</label><br>
+
+                <br>
+                <button type="button" class="start-button" onclick="gradeQuiz()">Submit Answers</button>
+                <p id="quizResult"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer">
+        <h1>Progress</h1>
+        <div id="progressBar">
+            <div id="userProgress"><p id="progressAmount"></p></div>
+        </div>
     </div>
-  </div>
 
-  <!-- Disco Quiz Section -->
-  <div id="discoquiz">
-    <h3>Test Your Disco Knowledge!</h3>
-    <form id="quizForm">
-      <div id="discoquestions">
-        <p>1. Which decade did disco music rise to popularity?</p>
-        <label><input type="radio" name="q1" value="60s">1960s</label><br>
-        <label><input type="radio" name="q1" value="70s">1970s</label><br>
-        <label><input type="radio" name="q1" value="90s">1990s</label><br>
-
-        <p>2. What is a popular disco dance move involving spelling with arms?</p>
-        <label><input type="radio" name="q2" value="macarena">Macarena</label><br>
-        <label><input type="radio" name="q2" value="ymca">YMCA</label><br>
-        <label><input type="radio" name="q2" value="dab">Dab</label><br>
-
-        <p>3. What is a signature sound of disco music?</p>
-        <label><input type="radio" name="q3" value="trap">Trap bass</label><br>
-        <label><input type="radio" name="q3" value="four">Four-on-the-floor beat</label><br>
-        <label><input type="radio" name="q3" value="acoustic">Acoustic guitar picking</label><br>
-      </div>
-      <button id="next" type="button" onclick="checkQuiz()">Submit Quiz</button>
-      <p id="quizResult"></p>
-    </form>
-  </div>
-
-  <!-- Footer -->
-  <div id="footer">
-    <h1>Stay Groovy</h1>
-    <p>&copy; 2025 Groove Team</p>
-  </div>
-
-  <!-- Script for Quiz -->
-  <script>
-    function checkQuiz() {
-      let score = 0;
-      const answers = {
-        q1: "70s",
-        q2: "ymca",
-        q3: "four"
-      };
-
-      for (let q in answers) {
-        const selected = document.querySelector(`input[name="${q}"]:checked`);
-        if (selected && selected.value === answers[q]) {
-          score++;
+    <script>
+        function gradeQuiz() {
+            let score = 0;
+            const correctAnswers = {
+                q1: "donna",
+                q2: "hustle",
+                q3: "saturday",
+                q4: "beat",
+                q5: "beegees"
+            };
+            for (let q in correctAnswers) {
+                const answer = document.querySelector(`input[name="${q}"]:checked`);
+                if (answer && answer.value === correctAnswers[q]) score++;
+            }
+            document.getElementById("quizResult").textContent = `You scored ${score}/5! 🕺`;
         }
-      }
-
-      document.getElementById('quizResult').textContent = `You got ${score}/3 correct!`;
-    }
-  </script>
-
+    </script>
 </body>
 </html>
