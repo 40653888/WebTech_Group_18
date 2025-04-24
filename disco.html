@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+can you make the webpage have more spacing and can there be more options for the questions 
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <link rel="Stylesheet" href="Music_stylesheet.css">
+    <link rel="stylesheet" href="Music_stylesheet.css">
     <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
-    <title>Classical</title>
+    <title>Disco</title>
 </head>
 <body>
     <div id="navigation_bar">
@@ -22,37 +23,142 @@
         </ul>
     </div>
 
-    <h1 id="classical-header">Classical Music</h1>
-    <p>Pieces from year-year</p>
-
-    <h2>Info why user is here</h2>
-
-    <div id="audio-player-container">
-        <p>Audio Player</p>
-        <!-- swaps with pause icon -->
-        <button id="play-icon"></button>
-    </div>
-
-    <div id="audio-options">
-        
-    </div>
-
-    <section id="classical-quiz">
-        <div id="quiz-question"></div>
-
-        <div id="quiz-options">
-
+    <section class="hero-container">
+        <div class="hero-headline">
+            <h2>Step into the</h2>
+            <h1>🪩 Disco Era! ✨</h1>
+        </div>
+        <div class="hero-p-container">
+            <div class="hero-p">
+                <p>The Disco period, peaking in the late 1970s, was a vibrant explosion of dance music, glittering fashion, and nightclub culture. Think mirror balls, funky basslines, and non-stop rhythm!</p>
+            </div>
+            <div class="hero-p">
+                <p>Get ready to strut your stuff and test your knowledge with our disco quiz. Boogie through the questions and relive the golden age of dance floors!</p>
+            </div>
         </div>
     </section>
 
-    <div id="footer">   <!-- This Section will contain the Progress Bar and any additional info to be added. -->
+    <section class="transition">
+        <h1>Groove your way through the glitter and glam of the disco revolution!</h1>
+    </section>
+
+    <section>
+        <div class="timeline-grid">
+            <div class="left-empty-ends"></div>
+            <div class="right-empty-ends"></div>
+
+            <div class="left">
+                <h1>🕺</h1>
+                <div class="left-text">
+                    <h3>Explore the birth of disco through iconic clubs like Studio 54 and Paradise Garage.</h3>
+                </div>
+            </div>
+
+            <div class="right-empty"></div>
+            <div class="left-empty"></div>
+
+            <div class="right">
+                <div class="right-text">
+                    <h3>Disco fashion was bold and dazzling: sequins, bell-bottoms, and platform shoes!</h3>
+                </div>
+                <h1>✨</h1>
+            </div>
+
+            <div class="left">
+                <h1>🎶</h1>
+                <div class="left-text">
+                    <h3>Legends like Donna Summer, Bee Gees, and Chic dominated the charts and hearts.</h3>
+                </div>
+            </div>
+
+            <div class="right-empty"></div>
+            <div class="left-empty"></div>
+
+            <div class="right">
+                <div class="right-text">
+                    <h3>Take the quiz and earn your disco crown!</h3>
+                </div>
+                <h1>👑</h1>
+            </div>
+
+            <div class="left">
+                <h1>💃</h1>
+                <div class="left-text">
+                    <h3>Show off your knowledge and keep the disco inferno burning!</h3>
+                </div>
+            </div>
+
+            <div class="right-empty"></div>
+            <div class="left-empty-ends"></div>
+            <div class="right-empty-ends"></div>
+        </div>
+    </section>
+
+    <!-- Disco Quiz Section -->
+    <section class="quiz-section">
+        <div class="quiz-container">
+            <h2>🪩 Disco Quiz: Are You a Dancefloor Pro? 🪩</h2>
+            <form id="discoQuiz">
+                <p>1. Who is known as the "Queen of Disco"?</p>
+<label><input type="radio" name="q1" value="donna">Donna Summer</label><br>
+<label><input type="radio" name="q1" value="whitney">Whitney Houston</label><br>
+<label><input type="radio" name="q1" value="gloria">Gloria Gaynor</label><br>
+<label><input type="radio" name="q1" value="janet">Janet Jackson</label><br>
+
+<p>2. Which dance style became popular with disco music?</p>
+<label><input type="radio" name="q2" value="tango">Tango</label><br>
+<label><input type="radio" name="q2" value="hustle">The Hustle</label><br>
+<label><input type="radio" name="q2" value="salsa">Salsa</label><br>
+<label><input type="radio" name="q2" value="boogie">Boogie Woogie</label><br>
+
+<p>3. What movie helped popularize disco music globally?</p>
+<label><input type="radio" name="q3" value="saturday">Saturday Night Fever</label><br>
+<label><input type="radio" name="q3" value="grease">Grease</label><br>
+<label><input type="radio" name="q3" value="fame">Fame</label><br>
+<label><input type="radio" name="q3" value="flashdance">Flashdance</label><br>
+
+<p>4. What is a common disco music feature?</p>
+<label><input type="radio" name="q4" value="slow">Slow piano ballads</label><br>
+<label><input type="radio" name="q4" value="beat">Four-on-the-floor beat</label><br>
+<label><input type="radio" name="q4" value="funk">Funky basslines</label><br>
+<label><input type="radio" name="q4" value="disco">Disco string sections</label><br>
+
+<p>5. Which of these bands is associated with disco music?</p>
+<label><input type="radio" name="q5" value="queen">Queen</label><br>
+<label><input type="radio" name="q5" value="beegees">Bee Gees</label><br>
+<label><input type="radio" name="q5" value="abba">ABBA</label><br>
+<label><input type="radio" name="q5" value="chic">Chic</label><br>
+                <br>
+                <button type="button" class="start-button" onclick="gradeQuiz()">Submit Answers</button>
+                <p id="quizResult"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer">
         <h1>Progress</h1>
- 
         <div id="progressBar">
-             <div id="userProgress"><p id="progressAmount"></p></div>
-         </div>
-     </div>
- 
-     <script src="script.js"></script>
+            <div id="userProgress"><p id="progressAmount"></p></div>
+        </div>
+    </div>
+
+    <script>
+        function gradeQuiz() {
+            let score = 0;
+            const correctAnswers = {
+                q1: "donna",
+                q2: "hustle",
+                q3: "saturday",
+                q4: "beat",
+                q5: "beegees"
+            };
+            for (let q in correctAnswers) {
+                const answer = document.querySelector(`input[name="${q}"]:checked`);
+                if (answer && answer.value === correctAnswers[q]) score++;
+            }
+            document.getElementById("quizResult").textContent = `You scored ${score}/5! 🕺`;
+        }
+    </script>
 </body>
 </html>
