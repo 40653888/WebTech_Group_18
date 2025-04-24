@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <link rel="Stylesheet" href="Music_stylesheet.css">
-    <link rel="Stylesheet" href="disco.css">
+    <link rel="stylesheet" href="Music_stylesheet.css">
+    <link rel="stylesheet" href="disco.css">
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
@@ -22,17 +22,85 @@
             <li><a href='Jazz_Period.html'>Jazz</a></li>
         </ul>
     </div>
-    <h1 id="discoheader"> The Disco Period</h1>
 
-    
-<div id="footer">   <!-- This Section will contain the Progress Bar and any additional info to be added. -->
-        <h1>Progress</h1>
- 
+    <h1 id="discoheader">🪩 The Disco Period</h1>
+
+    <section>
+        <h2>What is Disco?</h2>
+        <p>
+            Disco is a genre of dance music and a subculture that emerged in the 1970s from the United States’ urban nightlife scene. It blended elements of funk, soul, pop, and salsa. Iconic artists like Donna Summer, Bee Gees, Gloria Gaynor, and KC and the Sunshine Band helped make disco a global phenomenon.
+        </p>
+    </section>
+
+    <section>
+        <h2>Key Features of Disco Music</h2>
+        <ul>
+            <li>Four-on-the-floor beats</li>
+            <li>Syncopated basslines</li>
+            <li>Orchestral elements (strings, horns)</li>
+            <li>Funky rhythm guitars</li>
+            <li>Electronic synthesizers and drum machines</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Disco Fashion</h2>
+        <p>
+            Disco fashion was all about glam and glitz—think bell-bottoms, jumpsuits, platform shoes, sequins, and afros. Nightclubs like Studio 54 in New York were the epicenter of this glamorous lifestyle.
+        </p>
+    </section>
+
+    <section id="disco-quiz">
+        <h2>🎉 Disco Quiz</h2>
+        <p>Test your knowledge of the disco era!</p>
+
+        <form id="quizForm">
+            <label for="q1">1. Who is known as the "Queen of Disco"?</label><br>
+            <input type="radio" name="q1" value="a"> Madonna<br>
+            <input type="radio" name="q1" value="b"> Donna Summer<br>
+            <input type="radio" name="q1" value="c"> Gloria Estefan<br><br>
+
+            <label for="q2">2. What year was "Saturday Night Fever" released?</label><br>
+            <input type="radio" name="q2" value="a"> 1975<br>
+            <input type="radio" name="q2" value="b"> 1977<br>
+            <input type="radio" name="q2" value="c"> 1980<br><br>
+
+            <label for="q3">3. Which band recorded "Stayin' Alive"?</label><br>
+            <input type="radio" name="q3" value="a"> The Bee Gees<br>
+            <input type="radio" name="q3" value="b"> ABBA<br>
+            <input type="radio" name="q3" value="c"> Chic<br><br>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+
+        <p id="quizResult"></p>
+    </section>
+
+    <div id="footer">
+        <h2>Progress</h2>
         <div id="progressBar">
-             <div id="userProgress"><p id="progressAmount"></p></div>
-         </div>
-     </div>
- 
-     <script src="script.js"></script>
+            <div id="userProgress"><p id="progressAmount"></p></div>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'a'
+            };
+            let score = 0;
+            for (let question in answers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === answers[question]) {
+                    score++;
+                }
+            }
+            document.getElementById("quizResult").innerText = `You scored ${score} out of 3!`;
+        }
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
