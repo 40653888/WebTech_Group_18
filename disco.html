@@ -3,66 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disco Dance Zone</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Disco</title>
+  <link rel="stylesheet" href="Stylesheet.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to the Disco Dance Zone</h1>
-  </header>
 
-  <main>
-    <section>
-      <h2>About Disco</h2>
-      <p>Disco is a genre of dance music that emerged in the 1970s, known for its steady four-on-the-floor beats, syncopated basslines, and lush arrangements. It was hugely popular in nightclubs and helped inspire the dance culture of today.</p>
-    </section>
+  <!-- Navigation Bar -->
+  <div id="navigation_bar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="disco.html">Disco</a></li>
+      <!-- Add other genres as needed -->
+    </ul>
+  </div>
 
-    <section>
-      <h2>Popular Disco Dance Moves</h2>
+  <!-- Disco Introduction Section -->
+  <div id="Under_section">
+    <h2>Welcome to the Disco Dance Zone</h2>
+    <p>Disco exploded onto the scene in the 1970s with funky beats, flashy outfits, and energetic dance moves. It brought people together under shimmering lights and pulsing rhythms that still influence music and dance today.</p>
+  </div>
+
+  <!-- Disco Dance Moves Section -->
+  <div class="jazzcontainer">
+    <div class="jazztext">
+      <h3>Famous Disco Dance Moves</h3>
       <ul>
-        <li><strong>The Hustle:</strong> A line dance made famous by Van McCoy’s song "Do the Hustle".</li>
-        <li><strong>The Bus Stop:</strong> A choreographed group dance involving repeated steps and turns.</li>
-        <li><strong>The Bump:</strong> A dance where partners bump hips in rhythm with the music.</li>
-        <li><strong>The YMCA:</strong> Famous arm choreography from the Village People’s hit song.</li>
+        <li><strong>The Hustle:</strong> A slick partner dance that became a disco staple in the '70s.</li>
+        <li><strong>The Bus Stop:</strong> A choreographed line dance with turns and synchronized steps.</li>
+        <li><strong>The Bump:</strong> A cheeky move where partners bump hips to the beat.</li>
+        <li><strong>The YMCA:</strong> A crowd favorite with iconic arm motions to spell out Y-M-C-A.</li>
       </ul>
-    </section>
+    </div>
+    <div class="jazzimage">
+      <img src="images/disco-dance.jpg" alt="Disco dancers in action" />
+    </div>
+  </div>
 
-    <section>
-      <h2>Disco Dance Quiz</h2>
-      <form id="quizForm">
-        <p>1. What decade is most associated with Disco music?</p>
+  <!-- Disco Quiz Section -->
+  <div id="discoquiz">
+    <h3>Test Your Disco Knowledge!</h3>
+    <form id="quizForm">
+      <div id="discoquestions">
+        <p>1. Which decade did disco music rise to popularity?</p>
         <label><input type="radio" name="q1" value="60s">1960s</label><br>
         <label><input type="radio" name="q1" value="70s">1970s</label><br>
-        <label><input type="radio" name="q1" value="80s">1980s</label><br>
+        <label><input type="radio" name="q1" value="90s">1990s</label><br>
 
-        <p>2. Which dance move is associated with the song "YMCA"?</p>
-        <label><input type="radio" name="q2" value="moonwalk">Moonwalk</label><br>
-        <label><input type="radio" name="q2" value="ymca">YMCA</label><br>
+        <p>2. What is a popular disco dance move involving spelling with arms?</p>
         <label><input type="radio" name="q2" value="macarena">Macarena</label><br>
+        <label><input type="radio" name="q2" value="ymca">YMCA</label><br>
+        <label><input type="radio" name="q2" value="dab">Dab</label><br>
 
-        <p>3. What is a typical feature of disco music?</p>
-        <label><input type="radio" name="q3" value="guitar">Heavy Guitar Solos</label><br>
-        <label><input type="radio" name="q3" value="beat">Four-on-the-floor beat</label><br>
-        <label><input type="radio" name="q3" value="rap">Rap Verses</label><br>
+        <p>3. What is a signature sound of disco music?</p>
+        <label><input type="radio" name="q3" value="trap">Trap bass</label><br>
+        <label><input type="radio" name="q3" value="four">Four-on-the-floor beat</label><br>
+        <label><input type="radio" name="q3" value="acoustic">Acoustic guitar picking</label><br>
+      </div>
+      <button id="next" type="button" onclick="checkQuiz()">Submit Quiz</button>
+      <p id="quizResult"></p>
+    </form>
+  </div>
 
-        <br>
-        <button type="button" onclick="checkQuiz()">Submit Quiz</button>
-        <p id="quizResult"></p>
-      </form>
-    </section>
-  </main>
+  <!-- Footer -->
+  <div id="footer">
+    <h1>Stay Groovy</h1>
+    <p>&copy; 2025 Groove Team</p>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Disco Vibes</p>
-  </footer>
-
+  <!-- Script for Quiz -->
   <script>
     function checkQuiz() {
       let score = 0;
       const answers = {
         q1: "70s",
         q2: "ymca",
-        q3: "beat"
+        q3: "four"
       };
 
       for (let q in answers) {
@@ -75,5 +90,6 @@
       document.getElementById('quizResult').textContent = `You got ${score}/3 correct!`;
     }
   </script>
+
 </body>
 </html>
