@@ -1,1 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
+/* Header Disco Vibe */
+header {
+  padding: 2rem;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  color: white;
+  text-shadow: 2px 2px #000;
+  animation: pulse 2s infinite ease-in-out;
+  border-bottom: 3px solid #ff00cc;
+}
+
+/* Disco Ball Animation */
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+  }
+  50% {
+    text-shadow: 0 0 20px #33ccff, 0 0 30px #33ccff, 0 0 40px #33ccff;
+  }
+}
+
+/* Quiz Container */
+.quiz-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ff00cc;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff00cc;
+}
+
+/* Questions */
+.question {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #ffccff;
+}
+
+/* Options */
+.options {
+  list-style: none;
+  padding: 0;
+}
+
+.options li {
+  background: #330033;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #660066;
+}
+
+.options li:hover {
+  background: #660066;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff00cc;
+}
+
+/* Button */
+button {
+  background: #ff00cc;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 10px #ff00cc;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #cc00aa;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Add sparkle animation */
+@keyframes sparkle {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.sparkle {
+  animation: sparkle 2s infinite;
+}
