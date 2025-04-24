@@ -21,6 +21,30 @@ h1, h2 {
     margin-top: 30px;
 }
 
+/* -----------------------------
+   Disco Ball Animation
+----------------------------- */
+#discoBall {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    background: radial-gradient(circle, #ffffff 30%, #999999 70%, #666666 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff, 0 0 40px #f0f, 0 0 60px #0ff;
+    animation: spin 5s linear infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
 #discoheader {
     font-size: 3em;
     text-shadow: 2px 2px 5px #ff00ff;
