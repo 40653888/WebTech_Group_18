@@ -24,70 +24,77 @@
     </div>
     <section class="hero-container">
         <div class="hero-headline">
-            <h2>Step into the</h2>
-            <h1>✨Disco Era! 🕺</h1>
+            <h2>Welcome to the</h2>
+            <h1>✨ Disco Era! 🕺</h1>
         </div>
         <div class="hero-p-container">
             <div class="hero-p">
-                <p>Welcome to a groovy 1970s disco club! The lights are flashing, the dance floor is spinning, and funky beats are in the air.</p>
+                <p>You've entered a dazzling 1970s disco club! Mirror balls spin, lights flash, and the dance floor is alive with funky rhythms.</p>
             </div>
             <div class="hero-p">
-                <p>Your challenge? Identify the movements to the correct dance to continue finding your way back home.</p>
+                <p>Your mission? Prove your groove knowledge in our disco dance quiz! Get the moves right and learn fun facts about the dance floor legends of the disco era.</p>
             </div>
         </div>
     </section>
-    <section class="info-section">
-        <h2>🪩 About Disco</h2>
-        <p>Disco music emerged in the 1970s, known for its upbeat tempos, string sections, and funky basslines. It brought people together on the dance floor and celebrated freedom of expression, rhythm, and style.</p>
-        <p>Famous disco artists include Donna Summer, the Bee Gees, Gloria Gaynor, and Chic. Clubs like Studio 54 in New York City became legendary for their extravagant parties and iconic dance moves.</p>
+    <section class="transition">
+        <h1>Boogie through the questions and shine on the dance floor! ✨</h1>
     </section>
-    <section class="dance-moves-section">
-        <h2>🕺 Iconic Disco Dance Moves</h2>
-        <ul>
-            <li><strong>The Hustle:</strong> A line dance that became a phenomenon after the song “Do The Hustle.”</li>
-            <li><strong>The Bus Stop:</strong> A popular group routine with step-by-step movements and claps.</li>
-            <li><strong>The Bump:</strong> A playful move where dancers bump hips on beat.</li>
-            <li><strong>The YMCA:</strong> Spelling out letters with arm movements to the Village People’s hit.</li>
-        </ul>
+    <section>
+        <div class="timeline-grid">
+            <div class="left-empty-ends"></div>
+            <div class="right-empty-ends"></div>
+            <div class="left">
+                <h1>🪩</h1>
+                <div class="left-text">
+                    <h3>Answer fun questions about famous disco dance moves.</h3>
+                </div>
+            </div>
+            <div class="right-empty"></div>
+            <div class="left-empty"></div>
+            <div class="right">
+                <div class="right-text">
+                    <h3>Each correct answer lights up your disco cred!</h3>
+                </div>
+                <h1>🌟</h1>
+            </div>
+            <div class="left">
+                <h1>🕺</h1>
+                <div class="left-text">
+                    <h3>Choose the right move or style to match the groove!</h3>
+                </div>
+            </div>
+            <div class="right-empty"></div>
+            <div class="left-empty"></div>
+            <div class="right">
+                <div class="right-text">
+                    <h3>Wrong answers give you another spin at glory.</h3>
+                </div>
+                <h1>🔁</h1>
+            </div>
+            <div class="left">
+                <h1>💃</h1>
+                <div class="left-text">
+                    <h3>Score 5/5 to become a disco dancefloor hero!</h3>
+                </div>
+            </div>
+            <div class="right-empty"></div>
+            <div class="left-empty-ends"></div>
+            <div class="right-empty-ends"></div>
+        </div>
+        <div class="flex-container">
+            <a href="disco-quiz.html">
+                <button class="start-button">Start Quiz</button>
+            </a>
+        </div>
     </section>
-    <section class="quiz-section">
-        <h2>💃 Take the Disco Dance Quiz!</h2>
-        <form id="disco-quiz">
-            <p><strong>1. What dance involves bumping hips to the beat?</strong></p>
-            <input type="radio" name="q1" value="a"> The Hustle<br>
-            <input type="radio" name="q1" value="b"> The Twist<br>
-            <input type="radio" name="q1" value="c"> The Bump<br><br>
 
-            <p><strong>2. What club is famous for being a disco hotspot in the 1970s?</strong></p>
-            <input type="radio" name="q2" value="a"> The Viper Room<br>
-            <input type="radio" name="q2" value="b"> Studio 54<br>
-            <input type="radio" name="q2" value="c"> The Cotton Club<br><br>
+    <div id="footer">
+        <h1>Progress</h1>
+        <div id="progressBar">
+            <div id="userProgress"><p id="progressAmount"></p></div>
+        </div>
+    </div>
 
-            <p><strong>3. Which song encouraged spelling with dance moves?</strong></p>
-            <input type="radio" name="q3" value="a"> Funkytown<br>
-            <input type="radio" name="q3" value="b"> YMCA<br>
-            <input type="radio" name="q3" value="c"> Le Freak<br><br>
-
-            <button type="button" onclick="gradeQuiz()">Submit Answers</button>
-        </form>
-        <p id="quiz-result"></p>
-    </section>
-    <script>
-        function gradeQuiz() {
-            const answers = {
-                q1: 'c',
-                q2: 'b',
-                q3: 'b'
-            };
-            let score = 0;
-            for (let key in answers) {
-                const radios = document.getElementsByName(key);
-                for (let radio of radios) {
-                    if (radio.checked && radio.value === answers[key]) {
-                        score++;
-                    }
-                }
-            }
-            document.getElementById('quiz-result').innerText = `You got ${score} out of 3 correct!`;
-        }
-    </script>
+    <script src="script.js"></script>
+</body>
+</html>
