@@ -45,6 +45,13 @@ body {
     color: black;                   
 }
 
+#navigation_bar a.active {
+    background-color: #f1edee; 
+    border-radius: 10px;
+    font-weight: bold;
+    color: #3D5467;
+}
+
 
 /* Index */
 
