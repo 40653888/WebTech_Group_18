@@ -42,7 +42,7 @@ body {
     display: flex;                  
     text-decoration: none;          
     padding: 18px ; 
-    color: black;                   
+    color: #F1EDEE;
 }
 
 #navigation_bar a.active {
@@ -209,6 +209,7 @@ body {
 }
 
 #footer h1 {
+    color: #F1EDEE;
     padding: 4px;
 }
 

@@ -22,7 +22,7 @@
             <li><a href='Jazz_Period.html'>Jazz</a></li>
         </ul>
     </div>
-    <section class="hero-container">
+    <section class="padding-block hero-container">
         <div class="hero-headline">
             <h2>Welcome to the</h2>
             <h1>🔥Rock & Roll Era! 🎸</h1>
@@ -32,71 +32,81 @@
                 <p>You have landed in a vustling 1950s rock recording studio! The energy is electric, amplifiers are humming, and legendary musicians are rehearsing.</p>
             </div>
             <div class="hero-p">
-                <p>Your mission? Identify iconic rock songs by listening to short audio clips. Correct answers will unlock fascinating historical facts about the golden age of rock & roll.</p>
+                <p>Your mission? Test your rock knowledge through iconic audio clips, unforgettable voices, and famous quotes. Each correct answer reveals a piece of music history and gets you one step closer to the next era!</p>
             </div>
         </div>
     </section>
-    <section class="transition">
+    <section class="padding-block transition">
         <h1>Listen carefully, choose wisely, and rock your way back to the present!</h1>
     </section>
-    <section>
-        <div class="timeline-grid">
-            <div class="left-empty-ends"></div>
-            <div class="right-empty-ends"></div>
-            <div class="left">
-                <h1>🎵</h1>
-                <div class="left-text">
-                    <h3>Listen to a short clip of an iconic rock & roll song.</h3>
+    <section class="padding-block">
+        <div class="container timeline-grid">
+            <div class="left padding-block-sm">
+                <div class="item">
+                    <h1>1.</h1>
+                    <div class="item-text">
+                        <h3>Listen to a legendary moment — a song, a quote, or a clue.</h3>
+                    </div>
+                    <h1>🎵</h1>
                 </div>
             </div>
-            <div class="right-empty"></div>
-            <div class="left-empty"></div>
-            <div class="right">
-                <div class="right-text">
-                    <h3>Got it right? Earn points & reveal a historical fact.</h3>
-                </div>
-                <h1>👑</h1>
-            </div>
-            <div class="left">
-                <h1>🎧</h1>
-                <div class="left-text">
-                    <h3>Select the correct song title from four multiple‑choice options.</h3>
+            <div class="right padding-block-sm">
+                <div class="item">
+                    <h1>2.</h1>
+                    <div class="item-text">
+                        <h3>Choose the correct answer from multiple options.</h3>
+                    </div>
+                    <h1>👑</h1>
                 </div>
             </div>
-            <div class="right-empty"></div>
-            <div class="left-empty"></div>
-            <div class="right">
-                <div class="right-text">
-                    <h3>Wrong guess? Get a hint and try again!</h3>
-                </div>
-                <h1>🔄</h1>
-            </div>
-            <div class="left">
-                <h1>🚀</h1>
-                <div class="left-text">
-                    <h3>Score 15+ points to advance to the next era!</h3>
+            <div class="left padding-block-sm">
+                <div class="item">
+                    <h1>3.</h1>
+                    <div class="item-text">
+                        <h3>Got it right? Earn 5 points & reveal a historical fact.</h3>
+                    </div>
+                    <h1>🎧</h1>
                 </div>
             </div>
-            <div class="right-empty"></div>
-            <div class="left-empty-ends"></div>
-            <div class="right-empty-ends"></div>
+            <div class="right padding-block-sm">
+                <div class="item">
+                    <h1>4.</h1>
+                    <div class="item-text">
+                        <h3>Wrong guess? Get a hint and try again!</h3>
+                    </div>
+                    <h1>🔄</h1>
+                </div>
+            </div>
+            <div class="left padding-block-sm">
+                <div class="item">
+                    <h1>5.</h1>
+                    <div class="item-text">
+                        <h3>Score 25 points to advance to the next era!</h3>
+                    </div>
+                    <h1>🚀</h1>
+                </div>
+            </div>
         </div>
-        <div class="flex-container">
-            <a href="rock-quiz.html">
-                <button class="start-button">Start Game</button>
-            </a>
+        <div class=" padding-block flex-container">
+            <button class="start-button" id="start-button">Start Game</button>
         </div>
     </section>
 
-    
+    <section class="quiz container" id="quiz">
+        <h1 id="question"></h1>
+        <div id="player"></div>
+        <ul id="options"></ul>
+    </section>
+
     <div id="footer">   <!-- This Section will contain the Progress Bar and any additional info to be added. -->
         <h1>Progress</h1>
- 
+
         <div id="progressBar">
              <div id="userProgress"><p id="progressAmount"></p></div>
          </div>
      </div>
  
-     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script defer src="rock-quiz.js"></script>
 </body>
 </html>
