@@ -20,7 +20,7 @@ correctAnswer.forEach(button => {
 });
 
 
-
+/* Jazz QuizBox Section */
 const jazz_quiz_questions = [
     {
         jazz_question: " What country of Origin did Jazz come from? ",
@@ -80,3 +80,5 @@ document.getElementById("next").onclick = () => {
 };
 
 displayJazzQuestion();
+
+/* End Of Jazz Quiz Section */
