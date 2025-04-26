@@ -28,7 +28,7 @@
         <div class="jazztext">
             <p> 
                 It appears you have found yourself in the early 1920s - 1930s,
-                 here was the early dawn of the jazz age. Click on the following 
+                 here was the early dawn of the jazz age. Hover your mouse over the following 
                  images and immerse yourself with the Jazz period and tackle our 
                  Jazz quiz ! Goodluck !
             </p>
@@ -41,8 +41,7 @@
                         <img src="./Images/trumpet.jpg" alt="Image_1" style="width:300px;height:300px;">
                     </div>
                 <div class="jazzcardflip-back">
-                    <h1> Title </h1>
-                        <p> test, text on back of card  </p>
+                    <p> The trumpet is known as the lead instrument in Jazz music, is often overpowering in Jazz scores and is often seen as the leading instrument. One of the earliest pioneers of the trumpet was Buddy Bolden, a founder of Jazz. Fun fact, a trumpet is a brass instrument commonly used in classical and jazz ensembles.    </p>
                     </div>
                 </div> 
             </div>
@@ -53,8 +52,7 @@
                         <img src="./Images/doublebass.png" alt="Image_2" style="width:300px;height:300px;">
                     </div>
                 <div class="jazzcardflip-back">
-                    <h1> Title </h1>
-                        <p> test, text on back of card  </p>
+                    <p> Jazz was founded and initially developed in New Oeleans. It has a rich history developed by African-Americans, and significantly influenced European harmonic structure, and African rythms. Jazz come from Ragtime and Blues.    </p>
                     </div>
                 </div> 
             </div>
@@ -91,9 +89,21 @@
                       implimentation of improvisation, well known in RagTime.  
         </p>
 
+        <h2> Here is a list of Jazz genres </h2>
+        <p> Click on each genre to find out more! </p>
+
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Swing_music"> Swing </a></li>
+                <li><a href="https://www.masterclass.com/articles/latin-jazz-overview">Latin Jazz </a></li>
+                <li><a href="https://www.britannica.com/art/cool-jazz">Cool Jazz </a></li>
+                <li><a href="https://www.masterclass.com/articles/bebop-guide">BeBop </a></li>
+            </ul>
+
         
 
         <h2> Let's listen to some jazz concepts! </h2>
+        <p> Here is a 3 Jazz songs which usilise different types of rythms and sounds. Have a listen !  </p>
+
         <div class="musical-container">
             <div class="musical-concepts">
 
@@ -113,9 +123,9 @@
                 </div>
 
                 <div class="jazz_item">
-                    <h3> Here is Brother Jack McDuff - "Oblighetto" </h3>
+                    <h3> Here is Brother Idris Muhammad - "Power Of Soul" </h3>
                 <audio controls>
-                    <source src="./Audio/002  Brother Jack McDuff - Oblighetto.mp3" type="audio/mp3">
+                    <source src="./Audio/001  Idris Muhammad - Power Of Soul.mp3" type="audio/mp3">
                 </audio>
                
 
@@ -132,16 +142,8 @@
         </div> -->
     </div>
         
-        <h2> Here is a list of Jazz genres </h2>
-        <p> Click on each genre to find out more! </p>
-    <div id="jazz_subgenres">
-            <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Swing_music"> Swing </a></li>
-                <li><a href="https://www.masterclass.com/articles/latin-jazz-overview">Latin Jazz </a></li>
-                <li><a href="https://www.britannica.com/art/cool-jazz">Cool Jazz </a></li>
-                <li><a href="https://www.masterclass.com/articles/bebop-guide">BeBop </a></li>
-            </ul>
-    </div>
+    
+    
 
     <div id="Under_section">
 
@@ -159,20 +161,23 @@
                 <h2> Quiz </h2>
                 <div id="jazzquestions"></div>
                 <div id="jazzoptions"></div>
+                <button id="restart"> Restart </button>
                 <button id="next"> Next Question </button> 
                 <div id="jazzcounter"> Score : 0/5 </div>
             </div>
-
-
-            <div id="footer">   <!-- This Section will contain the Progress Bar and any additional info to be added. -->
-                <h1>Progress</h1>
-            
-                <div id="progressBar">
-                        <div id="userProgress"></div>
-                    </div>
-            </div>
-
     </div>
+
+    <div id="footer">   <!-- This Section will contain the Progress Bar and any additional info to be added. -->
+        <h1>Progress</h1>
+        <div id="progressBar">
+            <div id="userProgress"><p id="progressAmount"></p></div>
+        </div>
+    </div>
+                 
     <script src="script.js"></script>
+    </div>
+        
+    <div id="blankspace"></div>
+    <p></p>
 </body>
 </html>
