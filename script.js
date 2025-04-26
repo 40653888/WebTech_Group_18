@@ -3,17 +3,52 @@ const progressAmount = document.getElementById('progressAmount');
 const correctAnswer = document.querySelectorAll('.correct-answer');
 
 let userProgressionLevel = 0;
-progressAmount.innerHTML = 0 + '%';
+progressAmount.innerHTML = '0%';
 
 let addUserProgress = () => {
+    const quizCompleted = localStorage.getItem("quiz_completed");
+
+    if (quizCompleted == "true") {
+        alert("You have already completed the quiz, in order to achieve progress, visit the other pages in the navigation bar.");
+        return;
+    }
+
+
     if (userProgressionLevel < 100) {
         userProgressionLevel += 5;
         userProgress.style.width = userProgressionLevel + '%';
         progressAmount.innerHTML = userProgressionLevel + '%';
+
+        /* Storing User Progress */
+        localStorage.setItem("progress", userProgressionLevel);
     } else if (userProgressionLevel == 100) {
         open("completion.html")
     }
+};
+
+/* Retrieve Local saved progression*/
+/* Will need tweaked for variable names/ rewritten to suit*/
+
+window.onload = () => {
+    const savedProgress = localStorage.getItem("progress");
+    const quizCompleted = localStorage.getItem("quiz_completed");
+
+    if (savedProgress) {
+        userProgressionLevel = parseInt(savedProgress, 10);
+        userProgress.style.width = userProgressionLevel + '%';
+        progressAmount.innerHTML = userProgressionLevel + '%';
+    } else {
+        userProgressionLevel = 0;
+        userProgress.style.width = userProgressionLevel + '%';
+        progressAmount.innerHTML = userProgressionLevel + '%';
+    }
+    if (quizCompleted == "true") {
+    alert("You have already completed the quiz, visit another page to make progression.");
+    document.getElementById("jazzoptions").style.pointerEvents = "none";
+    document.getElementById("next").disabled = true;
+    }
 }
+
 
 correctAnswer.forEach(button => {
     button.addEventListener('click', addUserProgress);
@@ -22,17 +57,33 @@ correctAnswer.forEach(button => {
 
 /* Jazz QuizBox Section */
 const jazz_quiz_questions = [
+
     {
-        jazz_question: " What country of Origin did Jazz come from? ",
-        jazz_options: ["United Kingdom", "Germany", "Russia", "America"],
-        jazz_answers: "America"
+        jazz_question: " Where was Jazz founded? ",
+        jazz_options: ["New Orleans", "New York", "Florida", "Africa"],
+        jazz_answers: "New Orleans",
 
     },
     {
-        jazz_question: "example 2",
-        jazz_options: [4, 5, 6],
-        jazz_answers: "1"
-    }
+        jazz_question: " Which family will you find the Trumpet? ",
+        jazz_options: ["Wind", "Precussion", "Brass", "String"],
+        jazz_answers: "Brass"
+    },
+    {
+        jazz_question: " Which of these is a jazz concept? ",
+        jazz_options: ["Syncopation", "Improvisation", "Polyrythms", "All of the above"],
+        jazz_answers: "All of the above"
+    },
+    {
+        jazz_question: " Who of the following is a jazz pioneer? ",
+        jazz_options: ["Buddy Bolden", "Claude Debussy", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
+        jazz_answers: "Buddy Bolden"
+    },
+    {
+        jazz_question: " Which of the following is not a jazz subgenre? ",
+        jazz_options: ["Swing", "Latin Jazz", "Sonata", "BeBop"],
+        jazz_answers: "Sonata"
+    },
 ];
 
 let jazzcounter = 0;
@@ -64,6 +115,7 @@ function displayJazzQuestion(){
             } else {
                 alert("Incorrect!");
             }
+            
             jazzanswer.push(currentJazzQuestionIndex);
         };
         jazz_optionsElement.appendChild(button);
@@ -71,14 +123,38 @@ function displayJazzQuestion(){
 }
 
 document.getElementById("next").onclick = () => {
+    const quizCompleted = localStorage.getItem("quiz_completed");
+    if (quizCompleted == "true") {
+        alert("You have already completed the quiz");
+        return;
+    }
+
     if (currentJazzQuestionIndex == jazz_quiz_questions.length - 1) {
         alert("Quiz Complete, your score is: " + jazzcounter + "/" + jazz_quiz_questions.length);
+        if (jazzcounter == jazz_quiz_questions.length) {
+            userProgressionLevel = Math.min(userProgressionLevel + 25, 100);
+            userProgress.style.width = userProgressionLevel + '%';
+            progressAmount.innerHTML = userProgressionLevel + '%';
+
+            /* Storing User Progress */
+            localStorage.setItem("progress", userProgressionLevel);
+            localStorage.setItem("quiz_completed", true);
+
+
+        }
         return;
     }
     currentJazzQuestionIndex = (currentJazzQuestionIndex + 1) % jazz_quiz_questions.length;
     displayJazzQuestion();
 };
 
+document.getElementById("restart").addEventListener("click", function() {
+    alert("Quiz Reset");
+    
+    location.reload();
+});
+
 displayJazzQuestion();
 
+/* End Of Jazz Quiz Section */
 /* End Of Jazz Quiz Section */
