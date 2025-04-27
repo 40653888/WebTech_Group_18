@@ -11,6 +11,7 @@
 
 body {
     background-color: #F1EDEE;
+    overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -97,13 +98,11 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-size: cover;
-
 }
 
 .classical-hero-headings {
     color: #F1EDEE;
-    margin: 50px;
-    
+    padding: 50px;
 }
   
 #classical-header {
@@ -156,6 +155,11 @@ body {
     margin-top: 10px;
 }
 
+.classical-cards img {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
 .classical-cards p {
     padding: 20px;
 }
@@ -206,6 +210,7 @@ body {
 .quiz-section {
     background-color: #dfdfdf;
     height: 650px;
+    overflow-y: scroll;
 }
 
 
@@ -264,7 +269,7 @@ body {
 }
 
 #classical-q5-option3 {
-    margin-bottom: 75px;
+    margin-bottom: 150px;
 }
 
 @media (max-width: 450px) {
