@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inconsolata:wght@200..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&display=swap" rel="stylesheet">
+
     <title>Classical</title>
 </head>
 <body>
@@ -22,26 +26,203 @@
         </ul>
     </div>
 
-    <h1 id="classical-header">Classical Music</h1>
-    <p>Pieces from year-year</p>
+    <section class="classical-hero-image">
+        <div class="classical-hero-headings">
+            <h1 id="classical-header">Classical Music</h1>
+            <p id="classical-subheader">Pieces from 1600-1900</p>
+        </div>
+    </section>
 
-    <h2>Info why user is here</h2>
+    <h2 id="info-header">Welcome to the Classical period</h2>
+    <p id="classical-intro-para">
+        The Common-practice period was the most significant peroid in classical music, serving as the foundation of most Western music theory. <br> 
+        It encompassed the Baroque, Classical, and Romantic eras, spanding roughly 300 years from 1600 to 1900. 
+    </p>
 
-    <div id="audio-player-container">
-        <p>Audio Player</p>
-        <!-- swaps with pause icon -->
-        <button id="play-icon"></button>
+    <section class="classical-types-container">
+
+        <section class="classical-sections">
+            
+            <h2><a href="https://en.wikipedia.org/wiki/Baroque_music" target="_blank">Baroque (1600-1750)</a></h2>
+
+            <div class="classical-cards">
+                <img src="Images/baroque-music.jpg" alt="baroque painting" width="400px" height="225px">
+                <p>
+                    The Baroque period focused on ornate style, dramatic contrasts, and the use of basso continuo, a continuous bass line. 
+                    <br><br>
+                    Music became more complex than previous periods, with keyboard music played on the harpsichord, and the pipe organ growing in popularity. 
+                    <br><br>
+                    Famous composers and musicians:
+                    <br> Johann Sebastian Bach, Handel, and Vivaldi.
+                </p>
+            </div>
+        </section>
+
+        <section class="classical-sections">
+            <h2><a href="https://en.wikipedia.org/wiki/Classical_period_(music)" target="_blank">Classical (1750-1820)</a></h2>
+
+            <div class="classical-cards">
+                <img src="Images/classical-music.jpg" alt="" width="400px" height="225px">
+                <p>
+                    The Classical era was the peroid from the 1750s to the early 1820s. 
+                    During this, the Piano emerged as the most popular instrument, replacing the harpsichord.
+                    <br><br>
+                    The period focused on clarity, balance, and structure. 
+                    Music became more refined and elegant, with simpler melodies and clearer forms like sonata form and symphonies. 
+                    <br><br>
+                    Famous composers and musicians:
+                    <br>
+                    Ludwig van Beethoven, Wolfgang Amadeus Mozart, and Joseph Haydn. 
+                </p>
+            </div>
+        </section>
+
+        <section class="classical-sections">
+            <h2><a href="https://en.wikipedia.org/wiki/Romantic_music" target="_blank">Romantic (1820-1900)</a></h2>
+
+            <div class="classical-cards">
+                <img src="Images/romantic-music.jpg" alt="" width="400px" height="225px">
+                <p>
+                    Romantic music is all about emotion, individuality, and increased attention to an extended melodic line.
+                    Composers used music to tell stories and express deep feelings. 
+                    <br><br>
+                    Harmony became richer, and dynamics more dramatic.
+                    The size of the orchestra, which was typically around 40 in the Classical era, grew to be over 100.
+                    <br><br>
+                    Famous composers and musicians:
+                    <br>
+                    Chopin, Schumann, Brahms, and Tchaikovsky.
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <div class="modern-influence">
+        <h2>Modern influence</h2>
+        <div class="classical-modern-sections-container">
+            <div class="classical-modern-sections">
+                <ul>
+                    <li>The Baroque made the violin family of stringed instruments take the form generally seen today.</li>
+                    <br>
+                    <li>The use of complex harmonies and counterpoint has inspired genres like progressive rock and film scores.</li>
+                    <br>
+                    <li>Basso Continuo – The Baroque technique of a continuous bass line is echoed in basslines and rhythm sections in pop and jazz.</li>
+                </ul>
+            </div>
+            
+            <div class="classical-modern-sections">
+                <ul>
+                    <li>Classical made the basic forces required for an orchestra somewhat standarised.</li>
+                    <br>
+                    <li>The Classical era's focus on form and clarity shapes how modern pop and film music are structured.</li>
+                    <br>
+                    <li>Piano Fortepiano – The piano, refined in the Classical era, is the go-to for ballads, pop songwriting, and even lo-fi hip hop.</li>
+                </ul>
+            </div>
+
+            <div class="classical-modern-sections">
+                <ul>
+                    <li>Romantic music’s emotional depth and storytelling continue in soundtracks, ballads, and even metal.</li>
+                    <br>
+                    <li>Full Orchestra – Romantic composers expanded the orchestra, and that large-scale sound continues in film and game scoring.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div id="audio-options">
-        
-    </div>
+    <section class="quiz-section">
+        <div id="quiz-section-title"><h1>Quiz Time!</h1></div>
+        <div id="quiz-section-subtitle"><h4>▼ Scroll to reveal questions ▼</h4></div>
 
-    <section id="classical-quiz">
-        <div id="quiz-question"></div>
+        <div id="quiz-question-titles"><h3>What is the main instrument from the classical piece below?</h3></div>
+        <div id="audio-player-container">
+            <audio controls>
+                <source src="audio/Fur Elise - Beethoven.mp3" type="audio/mpeg">
+            </audio>
+        </div>
 
-        <div id="quiz-options">
+        <div class="classical-quiz-options-container">
+            <div id="classicalQuizQ1">
+                <button class="quiz-options" id="classical-q1-option1">
+                    <p>Xylophone</p>
+                </button>
 
+                <button class="quiz-options incorrect" id="classical-q1-option2">
+                    <p>Violin</p>
+                </button>
+
+                <button class="quiz-options correct" id="classical-q1-option3">
+                    <p>Piano</p>
+                </button>
+            </div>
+        </div>
+
+        <div id="quiz-question-titles"><h3>Which composer became deaf later in life but continued to compose music?</h3></div>
+        <div class="classical-quiz-options-container">
+            <div id="classicalQuizQ2">
+                <button class="quiz-options incorrect" id="classical-q2-option1">
+                    <p>Mozart</p>
+                </button>
+
+                <button class="quiz-options correct" id="classical-q2-option2">
+                    <p>Beethoven</p>
+                </button>
+
+                <button class="quiz-options incorrect" id="classical-q2-option3">
+                    <p>Haydn</p>
+                </button>
+            </div>
+        </div>
+
+        <div id="quiz-question-titles"><h3>A single Violin is made with how many pices of wood?</h3></div>
+        <div class="classical-quiz-options-container">
+            <div id="classicalQuizQ3">
+                <button class="quiz-options incorrect" id="classical-q3-option1">
+                    <p>50</p>
+                </button>
+
+                <button class="quiz-options correct" id="classical-q3-option2">
+                    <p>70</p>
+                </button>
+
+                <button class="quiz-options incorrect" id="classical-q3-option3">
+                    <p>25</p>
+                </button>
+            </div>
+        </div>
+
+        <div id="quiz-question-titles"><h3>Which country was Mozart from?</h3></div>
+        <div class="classical-quiz-options-container">
+            <div id="classicalQuizQ4">
+                <button class="quiz-options correct" id="classical-q4-option1">
+                    <p>Austria</p>
+                </button>
+
+                <button class="quiz-options incorrect" id="classical-q4-option2">
+                    <p>France</p>
+                </button>
+
+                <button class="quiz-options incorrect" id="classical-q4-option3">
+                    <p>Germany</p>
+                </button>
+            </div>
+        </div>
+
+        <div id="quiz-question-titles"><h3>What era expanded the orchestra the most?</h3></div>
+        <div class="classical-quiz-options-container">
+            <div id="classicalQuizQ5">
+                <button class="quiz-options incorrect" id="classical-q5-option1">
+                    <p>Baroque</p>
+                </button>
+
+                <button class="quiz-options incorrect" id="classical-q5-option2">
+                    <p>Classical</p>
+                </button>
+
+                <button class="quiz-options correct" id="classical-q5-option3">
+                    <p>Romantic</p>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -51,8 +232,8 @@
         <div id="progressBar">
              <div id="userProgress"><p id="progressAmount"></p></div>
          </div>
-     </div>
+    </div>
  
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

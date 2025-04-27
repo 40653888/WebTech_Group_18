@@ -19,9 +19,7 @@ body {
 #navigation_bar ul {     
     font-size: 20px;                              
     list-style-type: none;         
-    margin: 0;                          
-    padding: 0;                         
-    display: flex;                 
+    display: flex;           
 }
 
 #navigation_bar li :hover {                            
@@ -87,8 +85,220 @@ body {
 
 /* Classical */
 
+.classical-hero-image {
+    height: calc(100vh - 240px);
+    margin: 25px;
+    background-image: url(Images/classical-cover-imgg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+
+}
+
+.classical-hero-headings {
+    color: #F1EDEE;
+    margin: 50px;
+    
+}
+  
+#classical-header {
+    font-size: 45px;
+}
+
+#classical-subheader {
+    font-size: 20px;
+}
+
+.classical-types-container {
+    margin: 50px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.classical-types-container a {
+    text-decoration: none;
+    color: #3D5467;
+}
+
+#info-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#classical-intro-para {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.classical-sections {
+    padding: 25px 0px;
+    width: 400px;
+}
+
+.classical-sections h2 {
+    text-align: center;
+}
+
+.classical-cards {
+    width: 400px;
+    height: 550px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.classical-cards p {
+    padding: 20px;
+}
+
+.classical-section {
+    padding: 25px 0px;
+}
+
+.romantic-section {
+    padding: 25px 0px;
+}
+
+.classical-modern-influence-section {
+    padding: 25px 0px;
+}
+
+.classical-modern-influence-section h2{
+    color: #3D5467;
+}
+
+.modern-influence {
+    height: auto;
+    background-color: #8AA29E;
+    border-radius: 25px;
+    margin: 25px;
+    padding: 50px 100px;
+}
+
+.modern-influence h2 {
+    color: #ffffff;
+}
+
+.classical-modern-sections-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 50px 0px;
+}
+
+.classical-modern-sections {
+    background-color: #F1EDEE;
+    width: 500px;
+    border-radius: 25px;
+    padding: 25px;
+  
+}
+
+.quiz-section {
+    background-color: #dfdfdf;
+    height: 650px;
+}
 
 
+#quiz-section-title {
+    text-align: center;
+    margin: 30px;
+    text-transform: uppercase;
+}
+
+#quiz-section-subtitle {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#quiz-question-titles {
+    text-align: center;
+    margin: 110px 0px 70px 0px;
+}
+
+#audio-player-container {
+    text-align: center;
+    margin: 50px;
+}
+
+.classical-quiz-options-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+    text-align: center;
+    margin: 50px;
+}
+
+.quiz-options {
+    background-color: #3D5467;
+    color: #F1EDEE;
+    height: 125px;
+    width: 225px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.incorrect-answer {
+    background-color: rgb(207, 112, 112);
+}
+
+.correct-answer {
+    background-color: rgb(140, 191, 179);
+}
+
+.quiz-options p {
+    text-align: center;
+    padding: 50px;
+}
+
+#classical-q5-option3 {
+    margin-bottom: 75px;
+}
+
+@media (max-width: 450px) {
+    #navigation_bar ul {     
+        font-size: 10px;
+        text-align: center;                                      
+    }
+
+    .classical-sections img{
+        width: 100%;
+    }
+
+    .classical-cards {
+        width: 100%;
+        height: 650px;
+    }
+
+    .modern-influence {
+        margin: 10px;
+        padding: 25px 25px;
+    }
+
+    .classical-modern-sections-container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .quiz-section {
+        height: auto;
+    }
+
+    .classical-quiz-options-container button {
+        margin-bottom: 25px;
+    }
+
+    #classical-q5-option3 {
+        margin-bottom: 75px;
+    }
+}
 
 /* Rock n Roll */
 
@@ -117,6 +327,7 @@ body {
     text-align: center;
     background-color: #DB5461;
     height: 100px;
+    margin-top: 100px;
 }
 
 #footer h1 {
