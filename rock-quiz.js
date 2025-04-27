@@ -10,7 +10,7 @@ const questions = [
         answer: "Johnny B. Goode",
         hint: "It’s about a boy who could ‘play the guitar just like ringing a bell.’",
         fact: "Chuck Berry’s “Johnny B. Goode” is considered the blueprint for rock guitar. Released in 1958, it features energetic riffs and a story mirroring Berry’s own rise — it even became the only rock song included on NASA’s Voyager Golden Record, sent into space as a message to alien life.",
-        image: "images/chuck.png",
+        image: "Images/chuck.png",
         videoId: "Y-9Y4CCIWnM",
         start: 0,
         end: 15

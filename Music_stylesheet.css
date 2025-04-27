@@ -270,6 +270,7 @@ body {
 @media (max-width: 450px) {
     #navigation_bar ul {     
         font-size: 10px;
+        width: 100%;
         text-align: center;                                      
     }
 

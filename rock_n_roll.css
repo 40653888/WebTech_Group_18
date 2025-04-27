@@ -56,6 +56,7 @@ body {
     background: var(--indian-red);
     color: var(--white-smoke);
     text-align: center;
+    width: 100%;
     padding: 1rem;
 }
 
