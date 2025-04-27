@@ -33,18 +33,18 @@ body {
 }
 
 #navigation_bar ul {       
-    width: 100vw;                             
+    width: 100%;
     justify-content: flex-start;
     align-items: center;
     background-color: #3D5467;        
-    padding: 14px;             
+    padding: 14px;
 }
 
 #navigation_bar a {              
     display: flex;                  
     text-decoration: none;          
     padding: 18px ; 
-    color: black;                   
+    color: #f1edee;
 }
 
 #navigation_bar a.active {
@@ -376,7 +376,7 @@ body {
 #footer {
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     background-color: #DB5461;
     height: 100px;
@@ -384,6 +384,7 @@ body {
 
 
 #footer h1 {
+    color: #f1edee;
     padding: 4px;
 }
 
@@ -393,7 +394,7 @@ body {
 }
 
 #progressBar {
-    width: 1000px;
+    width: 70%;
     margin: 10px auto;
     background-color: #3D5467;
 }

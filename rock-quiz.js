@@ -10,7 +10,10 @@ const questions = [
         answer: "Johnny B. Goode",
         hint: "It’s about a boy who could ‘play the guitar just like ringing a bell.’",
         fact: "Chuck Berry’s “Johnny B. Goode” is considered the blueprint for rock guitar. Released in 1958, it features energetic riffs and a story mirroring Berry’s own rise — it even became the only rock song included on NASA’s Voyager Golden Record, sent into space as a message to alien life.",
-        videoId: "YOUR_CLIP_ID_1"
+        image: "images/chuck.png",
+        videoId: "Y-9Y4CCIWnM",
+        start: 0,
+        end: 15
     },
     {
         question: "Whose voice is singing this iconic line?",
@@ -23,7 +26,10 @@ const questions = [
         answer: "Freddie Mercury",
         hint: "He was the frontman of a band famous for songs like ‘We Will Rock You.’",
         fact: "Freddie Mercury, lead singer of Queen, was known for his four-octave vocal range. “Bohemian Rhapsody” showcased his operatic and rock skills in one song, redefining what a rock band could sound like.",
-        videoId: "YOUR_CLIP_ID_2"
+        image: "Images/freddy.png",
+        videoId: "vbvyNnw8Qjg",
+        start: 63,
+        end: 78
     },
     {
         question: "Which of these is a typical Rock & Roll fashion from the 1950s?",
@@ -36,7 +42,6 @@ const questions = [
         answer: "Leather jackets and slicked hair",
         hint: "This style was inspired by biker gangs and Hollywood rebels.",
         fact: "The 1950s rock scene brought with it the “greaser” look — slick hair with pomade, cuffed jeans, boots, and black leather jackets. It symbolized teenage rebellion, coolness, and anti-establishment energy — the fashion became as iconic as the music itself.",
-        videoId: "YOUR_CLIP_ID_3"
     },
     {
         question: "Who said, “If you tried to give rock and roll another name, you might call it Chuck Berry”?",
@@ -49,7 +54,6 @@ const questions = [
         answer: "John Lennon",
         hint: "He was a Beatle, and a huge Berry fan.",
         fact: "John Lennon saw Chuck Berry as the true father of rock & roll. Lennon once said, “He was writing good lyrics and intelligent lyrics in the '50s when people were singing ‘Oh baby I love you so.’” His admiration influenced much of the early Beatles’ guitar-driven sound.",
-        videoId: "YOUR_CLIP_ID_4"
     },
     {
         question: "Which musical innovation had the biggest impact on shaping the sound of 1960s–70s electric rock music?",
@@ -62,9 +66,49 @@ const questions = [
         answer: "Guitar amplifier with distortion",
         hint: "It helped create the gritty, powerful sound that defined artists like Hendrix and The Who.",
         fact: "The guitar amplifier with distortion changed rock forever. By pushing amps beyond their limits, artists like Jimi Hendrix, Pete Townshend, and Eric Clapton unlocked raw, aggressive tones that gave birth to hard rock and metal. Distortion wasn’t a flaw — it became the sound of rebellion.",
-        videoId: "YOUR_CLIP_ID_5"
     }
 ];
+
+// youtube video player
+let player;
+let ready = false;
+
+// Called by the YouTube API once it's loaded
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        videoId: questions[0].videoId,
+        playerVars: {
+            autoplay: 0,
+            controls: 0,
+            // hide annotations
+            iv_load_policy: 3,
+            // no YouTube logo
+            modestbranding: 1,
+            // no related videos
+            rel: 0
+        },
+        events: {
+            onReady () {
+                ready = true;
+            }
+        }
+    });
+}
+
+// toggle play/pause via youtube api
+const playBtn = document.getElementById('playPause');
+
+playBtn.addEventListener('click', () => {
+    const state = player.getPlayerState();   // current YT state
+
+    if (state === YT.PlayerState.PLAYING) {  // ⬅ already playing
+        player.pauseVideo();
+    } else {                                 // ⬅ paused / cued / ended
+        player.playVideo();
+    }
+});
+
+
 
 let score = 0;
 let index = 0;
@@ -74,11 +118,12 @@ function loadQuestion() {
     const quiz = document.getElementById("quiz");
     const options = document.getElementById("options");
     const q = document.getElementById("question");
+    const img = document.getElementById("image");
 
     //
     if (index === questions.length) {
         quiz.style.display = "none";
-        alert("You won!");
+        document.getElementById('results').hidden = false;
         return;
     }
 
@@ -88,8 +133,18 @@ function loadQuestion() {
     // a bit confusing, basically sets question element text
     q.innerHTML = question.question;
 
+    // set question image
+    img.src = question.image;
+
     // clear previous buttons
     options.innerHTML = "";
+
+    // load the video
+    player.cueVideoById({
+        videoId: question.videoId,
+        startSeconds: question.start || 0,
+        endSeconds: question.end || undefined
+    });
 
     // create button for each option
     question.options.forEach(option => {
@@ -112,6 +167,8 @@ function loadQuestion() {
 
                 // increment score
                 score++;
+
+                //TODO: integrate with global progress
                 addUserProgress();
 
                 // move index
@@ -131,9 +188,29 @@ function loadQuestion() {
             }
         })
     })
+
+    const rightCol = document.getElementById("column-right");
+    // decide of right part of quiz markup is needed
+    const hasVideo = !!question.videoId;
+    const hasImage = !!question.image;
+
+    if (!hasVideo && !hasImage) {
+        // Hide the whole column and make sure nothing is playing
+        rightCol.hidden = true;
+        player.stopVideo?.();
+        return;
+    }
+    // Show the column
+    rightCol.hidden = false;
 }
 // start the quiz
 document.getElementById("start-button").addEventListener("click", () => {
+
+    // player not ready yet
+    if (!ready) {
+        alert("The video player is still loading — please try again in a second!");
+        return;
+    }
 
     const quiz = document.getElementById("quiz");
 
